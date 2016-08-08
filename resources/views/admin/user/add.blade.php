@@ -3,10 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>USER ADD</title>
+
 </head>
 <body>
-	add user page
-	<form action="action.php?a=add" method="post">
+	<center><div class="netsch_log">
+	<p>add user page</p>
+	<form action="action('AdminController@add')" method="post">
 			<table>
 				<tr>
 					<td>用户名：</td>
@@ -38,6 +40,7 @@
 				</tr>
 			</table>
 		</form>
-	</center>
+        </div>
+        </center>
 </body>
 </html>

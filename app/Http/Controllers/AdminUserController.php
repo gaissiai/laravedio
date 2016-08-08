@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class AdminUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,18 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //$_POST['id'] = 15;
-        $id = [];
-        $id = $_POST;
-        
-        $data['a'] = "hello";
-        $data['b'] = "world";
-        if(!$_POST){
-            return view('admin.login');
-        } else {
-            return view('admin.index', compact('data',$data));
-
-        }
+        //
     }
 
     /**
