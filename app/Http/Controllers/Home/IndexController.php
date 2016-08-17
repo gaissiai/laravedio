@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //
+        //  网站首页
+        return view('home.index');
     }
 
     /**

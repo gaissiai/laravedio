@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +18,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        // 用户中心
+        $users = User::all();
+        //print_r($user);
+        //return($users[1]['username']);
+
+        return view('admin.user.index', compact('users',$users));
     }
 
     /**
@@ -26,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -37,7 +44,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 添加 用户信息 进数据库
+        //dd($request->all());
+        //接受post传过来的数据
+        //存入数据库
+        //重定向
+        $input = $request->all();
+        $input['password'] = md5($input['password']);
+        $input['remember_token'] = $input['_token'];
+        $input['published_at'] = Carbon::now();
+//        dd($input);
+        User::create($input);
+        return redirect('/admin/user');
+
     }
 
     /**
@@ -59,7 +78,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        //修改用户信息
+        //dd($id);
+        $user = User::findOrFail($id);
+//        dd($user['id']);
+        return view('admin.user.edit',compact('user',$user));
     }
 
     /**
@@ -71,7 +94,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request->all());
     }
 
     /**
@@ -82,6 +105,17 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //dd($id);
+        User::destroy($id);
+        return redirect('/admin/user');
     }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
 }

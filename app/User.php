@@ -25,10 +25,10 @@ class User extends Model implements AuthenticatableContract,
 
     /**
      * The attributes that are mass assignable.
-     *
+     * 可以批量执行的字段（白名单）
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['username', 'email','password', 'remember_token','is_admin'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +36,11 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /**
+     *  不可以批量执行的字段（黑名单）
+     *  白名单 黑名单 只能设置一个 （非白既黑）
+     */
+//    protected $guarded = ['is_admin'];
+
 }

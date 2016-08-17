@@ -15,14 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', 'HomeController@index');
+Route::get('home', 'Home\IndexController@index');
 
-Route::get('home/create', 'HomeController@create');
+Route::get('admin', 'Admin\IndexController@index');
 
-Route::get('admin', 'AdminController@index');
 
-Route::get('admin/add', function () {
-	return view('admin.user.add');
-});
 
+Route::get('admin/user', 'Admin\UserController@index');
+Route::get('admin/user/create', 'Admin\UserController@create');
+Route::post('admin/user', 'Admin\UserController@store');
+
+Route::get('admin/user/destroy/{id}', 'Admin\UserController@destroy');
+Route::get('admin/user/edit/{id}', 'Admin\UserController@edit');
+Route::post('admin/user/update/{id}', 'Admin\UserController@update');
+
+
+// 认证路由...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// 注册路由...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 

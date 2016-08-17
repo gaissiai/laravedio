@@ -8,7 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "barryvdh/laravel-ide-helper": "^2.2",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "illuminate/html": "^5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -42,19 +43,16 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize",
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
             "php artisan optimize"
         ]
     },
     "config": {
         "preferred-install": "dist"
-    },
-    "scripts":{
-        "post-update-cmd": [
-            "php artisan clear-compiled",
-            "php artisan ide-helper:generate",
-            "php artisan optimize"
-        ]
     }
+   
     
 
 }
