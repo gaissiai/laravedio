@@ -12,11 +12,11 @@
                     <input type="hidden" name="id" value="{{$user['id']}}" >
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" >
                     <tr>
-                        <td>用户名</td>
+                        <td style="text-align: right">用户名</td>
                         <td><input type="text" name="username" value="{{$user['username']}}"></td>
                     </tr>
                     <tr>
-                        <td>用户名</td>
+                        <td style="text-align: right">邮箱</td>
                         <td><input type="email" name="email" value="{{$user['email']}}"></td>
                     </tr>
                     <tr>

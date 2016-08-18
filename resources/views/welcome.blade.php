@@ -40,6 +40,12 @@
             <div class="content">
                 <div class="title">Welcome maYuu</div>
             </div>
+            <div>
+                <a href="/home">网站首页</a>
+            </div>
+            <div>
+                <a href="/admin">后台管理</a>
+            </div>
         </div>
     </body>
 </html>

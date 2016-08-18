@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,8 +17,23 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-    }
+        // 用户 个人中心
+//        $request->session()->put('id', '23');
+        //session(['id'=> 50]);
+        if(session('id') == null ){
+            return view('auth.login');
+
+        } else {
+
+}
+
+            $id = session('id');
+            $user = User::findOrFail($id);
+            dd($user);
+            return view('home.user.index', compact('user',$user));
+
+        }
+
 
     /**
      * Show the form for creating a new resource.

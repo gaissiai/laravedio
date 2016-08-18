@@ -19,8 +19,11 @@ Route::get('home', 'Home\IndexController@index');
 
 Route::get('admin', 'Admin\IndexController@index');
 
+//前台用户管理
+Route::get('home/user', 'Home\UserController@index');
 
 
+// 后台用户管理
 Route::get('admin/user', 'Admin\UserController@index');
 Route::get('admin/user/create', 'Admin\UserController@create');
 Route::post('admin/user', 'Admin\UserController@store');
