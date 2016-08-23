@@ -2,7 +2,7 @@
     <table style="">
         <tr>
             <td>ID</td>
-            <td>username</td>
+            <td>name</td>
             <td>注册时间</td>
             <td>修改时间</td>
             <td>操作</td>
@@ -10,7 +10,7 @@
         @foreach ($users as $user)
         <tr>
             <td>{{$user['id']}}</td>
-            <td>{{$user['username']}}</td>
+            <td>{{$user['name']}}</td>
             <td>{{$user['created_at']}}</td>
             <td>{{$user['updated_at']}}</td>
             <td><a href="/admin/user/edit/{{$user['id']}}">编辑</a>&nbsp;

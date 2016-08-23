@@ -13,7 +13,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" >
                     <tr>
                         <td style="text-align: right">用户名</td>
-                        <td><input type="text" name="username" value="{{$user['username']}}"></td>
+                        <td><input type="text" name="name" value="{{$user['name']}}"></td>
                     </tr>
                     <tr>
                         <td style="text-align: right">邮箱</td>
