@@ -33,6 +33,11 @@ Route::get('admin/user/edit/{id}', 'Admin\UserController@edit');
 Route::post('admin/user/update/{id}', 'Admin\UserController@update');
 
 
+// 后台视频管理
+Route::get('admin/vedio', 'Admin\VedioController@index');
+Route::get('admin/vedio/create', 'Admin\VedioController@create');
+
+
 // 认证路由...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

@@ -16,7 +16,8 @@ class VedioController extends Controller
      */
     public function index()
     {
-        //
+        // 后台视频管理 主页
+        return view('admin.vedio.index');
     }
 
     /**
@@ -26,7 +27,8 @@ class VedioController extends Controller
      */
     public function create()
     {
-        //
+        // 后台食品添加页面
+        return view('admin.vedio.create');
     }
 
     /**

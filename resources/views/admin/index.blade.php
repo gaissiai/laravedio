@@ -7,6 +7,6 @@
 <body>
 	<p>admin_index</p><br/>
 	<a href="/admin/user">用户管理</a>
-	<a href="#">视频管理</a>
+	<a href="/admin/vedio">视频管理</a>
 </body>
 </html>
