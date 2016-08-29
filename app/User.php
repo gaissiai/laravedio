@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      * 可以批量执行的字段（白名单）
      * @var array
      */
-    protected $fillable = ['username', 'email','password', 'remember_token','is_admin'];
+    protected $fillable = ['name', 'email','password', 'remember_token','is_admin'];
 
     /**
      * The attributes excluded from the model's JSON form.

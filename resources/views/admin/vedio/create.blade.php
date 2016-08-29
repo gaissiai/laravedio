@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>USER ADD</title>
+    <title>Vedio Create</title>
 
 </head>
 <body>
@@ -63,6 +63,10 @@
             <tr>
                 <td>播放所需点数（默认隐藏，有由公开选项触发JS）：</td>
                 <td><input type="text" name="needpoint"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="确定提交"></td>
+                <td></td>
             </tr>
         </table>
     </form>

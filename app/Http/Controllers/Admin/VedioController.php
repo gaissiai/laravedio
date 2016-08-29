@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Vedio;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -17,7 +18,9 @@ class VedioController extends Controller
     public function index()
     {
         // 后台视频管理 主页
-        return view('admin.vedio.index');
+        $vedios = Vedio::all();
+
+        return view('admin.vedio.index',compact('vedios',$vedios));
     }
 
     /**
@@ -39,7 +42,10 @@ class VedioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+//        dd($input);
+        Vedio::create($input);
+        return redirect('/admin/vedio');
     }
 
     /**

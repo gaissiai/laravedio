@@ -36,6 +36,7 @@ Route::post('admin/user/update/{id}', 'Admin\UserController@update');
 // 后台视频管理
 Route::get('admin/vedio', 'Admin\VedioController@index');
 Route::get('admin/vedio/create', 'Admin\VedioController@create');
+Route::post('admin/vedio', 'Admin\VedioController@store');
 
 
 // 认证路由...
