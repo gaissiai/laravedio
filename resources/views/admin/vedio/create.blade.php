@@ -8,7 +8,7 @@
 <body>
 <div class="netsch_log">
     <p>add vedio page</p>
-    <form action="/admin/vedio" method="POST">
+    <form action="/admin/vedio" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <table>
             <tr>
@@ -54,11 +54,11 @@
             </tr>
             <tr>
                 <td>视频路径：</td>
-                <td><input type="text" name="vedio_path"></td>
+                <td><input type="file" name="vedio_path"></td>
             </tr>
             <tr>
                 <td>封面图片：</td>
-                <td><input type="text" name="image_path"></td>
+                <td><input type="file" name="image_path"></td>
             </tr>
             <tr>
                 <td>播放所需点数（默认隐藏，有由公开选项触发JS）：</td>

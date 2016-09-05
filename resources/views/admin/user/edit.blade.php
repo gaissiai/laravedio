@@ -6,7 +6,7 @@
     </head>
     <body>
         <div style="width:100%; margin:150px 0 0 40%;">
-            <form action="/admin/user/update/{{$user['id']}}" method="POST">
+            <form action="/admin/user/update/{{$user['id']}}" method="POST" enctype="multipart/form-data">
 
                 <table style="border:1px;">
                     <input type="hidden" name="id" value="{{$user['id']}}" >

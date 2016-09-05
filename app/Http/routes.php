@@ -40,6 +40,7 @@ Route::post('admin/vedio', 'Admin\VedioController@store');
 
 Route::get('admin/vedio/destroy/{id}', 'Admin\VedioController@destroy');
 Route::get('admin/vedio/edit/{id}', 'Admin\VedioController@edit');
+Route::post('admin/user/update/{id}', 'Admin\UserController@update');
 
 
 // 认证路由...

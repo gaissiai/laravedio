@@ -8,7 +8,7 @@
 <body>
 <div class="netsch_log">
     <p>add vedio page</p>
-    <form action="/admin/vedio" method="POST">
+    <form action="/admin/vedio/update/{id}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <table>
             <tr>
