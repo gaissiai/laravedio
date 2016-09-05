@@ -153,6 +153,12 @@ return [
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+
+        /*
+         * Intervention/image
+         */
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -202,6 +208,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Form'      => Illuminate\Html\FormFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

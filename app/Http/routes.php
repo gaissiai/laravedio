@@ -38,6 +38,9 @@ Route::get('admin/vedio', 'Admin\VedioController@index');
 Route::get('admin/vedio/create', 'Admin\VedioController@create');
 Route::post('admin/vedio', 'Admin\VedioController@store');
 
+Route::get('admin/vedio/destroy/{id}', 'Admin\VedioController@destroy');
+Route::get('admin/vedio/edit/{id}', 'Admin\VedioController@edit');
+
 
 // 认证路由...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

@@ -67,7 +67,10 @@ class VedioController extends Controller
      */
     public function edit($id)
     {
-        //
+//        dd($id);
+        $vedio = Vedio::findOrFail($id);
+        dd($vedio);
+        return view('admin.vedio.edit',compact('vedio'));
     }
 
     /**
@@ -90,6 +93,9 @@ class VedioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 删除视频
+//        dd($id);
+        Vedio::destroy($id);
+        return redirect('/admin/vedio');
     }
 }
