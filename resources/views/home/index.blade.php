@@ -9,3 +9,6 @@
 <div style="float: right; margin-right: 20px;">
     <span><a href="/home/user">用户管理中心</a></span>
 </div>
+<div style="float: right; margin-right: 20px;">
+    <a href="/auth/logout">退出</a>
+</div>

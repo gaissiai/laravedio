@@ -50,7 +50,7 @@ class UserController extends Controller
         //存入数据库
         //重定向
         $input = $request->all();
-        $input['password'] = md5($input['password']);
+        $input['password'] = bcrypt($input['password']);
         $input['remember_token'] = $input['_token'];
         $input['published_at'] = Carbon::now();
 //        dd($input);
