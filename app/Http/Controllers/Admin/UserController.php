@@ -18,8 +18,14 @@ class UserController extends Controller
      */
     public function index()
     {
+
         // 用户中心
-        $users = User::all();
+        if(session('name') && session('is_admin') ==1 ){
+            $users = User::all();
+
+        }
+
+
         //print_r($user);
         //return($users[1]['username']);
 
